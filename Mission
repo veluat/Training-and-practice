@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Алмаз Монах</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		.header {
+			background-color: lightblue;
+			color: black;
+			text-align: center;
+			font-size: 36pt;
+			height: 100%;
+		}
+		.welcome {
+			background-color: gray;
+			color: white;
+			text-align: center;
+			font-size: 16pt;
+			height: 30px;
+			margin: 0px;
+		}
+		.main-text {
+			width: 60%;
+			height: 100%;
+			float: left;
+			background-color: beige;
+		}
+		.pad {
+			padding: 25px;
+		}
+		.divs {
+			margin: 5px;
+			width: 14%;
+			float: left;
+			border: 4px solid lightblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="header pad">
+		Обнаружение алмаза Монах
+	</div>
+	<div>
+		<p class="welcome">
+			Похищенный алмаз обнаружен экспедицией в Сибири!
+		</p>
+	</div>
+	<div class="main-text pad">
+		<p>
+			Профессор Бейрстоун и доктор Дэй искали в Сибири оканемелости.<br/>
+			В далекой пещере они обнаружили похищенный алмаз.
+		</p>
+		<p>
+			Группа была в восторге от своей находки.<br/>
+			Драгоценность быда похищена из Москвы.<br/>
+			Кража произошла три года назад.<br/>
+			Основные подозреваемые - братья Бонд.<br/>
+			Они прислали снимок из лагеря:
+		</p>
+		<img src="TeamPhoto.jpg" alt="TeamPhoto" style="height: 205px;"/>
+	</div>
+	<div class="divs pad">
+		<img src="diamond.jpg" alt="Алмаз Монах" style="width: 150px;"/>
+		<p style="text-align: center;">Алмаз Монах</p>
+	</div>
+	<div class="divs pad" style="text-align: center;">Факты об алмазе:<br/>
+		Карат: 300<br/>
+		Цвет: зеленый<br/>
+		Цена более $10 миллионов</p>
+	</div>
+</body>
+</html>
