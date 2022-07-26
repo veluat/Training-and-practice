@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приложение Список задач</title>
+  <script>
+    function addItem() {
+      let newItem = document.createElement("div");
+      newItem.innerHTML = document.getElementById("box").value;
+      newItem.onclick = removeItem;
+      document.getElementById("list").appendChild(newItem);
+      saveList();
+    }
+    function removeItem() {
+      document.getElementById("list").removeChild(this);
+      saveList();
+    }
+    function saveList() {
+      localStorage.storedList = document.getElementById("list").innerHTML;
+    }
+    function loadList() {
+      document.getElementById("list").innerHTML = localStorage.storedList;
+      for(let i=0; i<list.children.length; i++) {
+        list.children[i].onclick = removeItem;
+      }
+    }
+  </script>
+  <style>
+    .header {
+    height:150px; 
+    width: 650px; 
+    background-color:lightblue; 
+    float: center; 
+    padding: 10px; 
+    margin:20px;
+    text-align:center; 
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    }
+    .app {
+    height:600px;
+    width: 650px;
+    background-color:lightgreen; 
+    float: center; 
+    padding:15px; 
+    margin:20px;
+    font-size:24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    }
+    input[type="button"] {
+      background-color: pink;
+      font-size:16px;
+    }
+    input[type="text"] {
+    padding-bottom: 2px;
+    padding-right: 100px;
+    font-size:20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+  <img src="https://getcodingkids.com/wp-content/uploads/2016/05/VolkovLogo.png" class="smaller-image" style="float: left;"> 
+  <p style="padding-top: 20px;">Дом Волковых</p>
+</div>
+<div class="app">
+  <p style="font-size:30px; font-style:bold; margin-top: 5px; margin-bottom: 15px;">Задачи для специальной выставки</p>
+  <input type="text" id="box" value=""/>
+  <br/>
+  <input type="button" value="Добавь элемент" onclick="addItem()";/>
+<br/>
+  <div id="list"></div>
+</div>
+  <script>
+    if(localStorage.storedList) {
+      loadList();
+    }
+  </script>
+</body>
+</html>
