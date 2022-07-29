@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prequal</title>
+    <script>
+        let taxi = {
+            make: "Webville Motors",
+            model: "Taxi",
+            year: 1955,
+            color: "yellow",
+            passengere: 4,
+            convertible: false,
+            mileage: 281341
+        };
+
+        let cadi = {
+            make: "GM",
+            model: "Cadillac",
+            year: 1955,
+            color: "tan",
+            passengere: 5,
+            convertible: false,
+            mileage: 12892
+        };
+
+        let fiat = {
+            make: "Fiat",
+            model: 500,
+            year: 1957,
+            color: "Medium Blue",
+            passengere: 2,
+            convertible: false,
+            mileage: 88000
+        };
+
+        let chevy = {
+            make: "Chevy",
+            model: "Bel Air",
+            year: 1957,
+            color: "red",
+            passengere: 2,
+            convertible: false,
+            mileage: 1021
+        };
+
+    function prequal(car) {
+        if (car.mileage > 10000 | car.year > 1960) {
+            console.log("You gotta check out this " + car.make + " " + car.model);
+    } else {
+        console.log("You gotta check out this " + taxi.make + " " + taxi.model);
+        }
+    }
+
+    let worthALook = prequal(taxi);
+    let worthALookA = prequal(cadi);
+    let worthALookB = prequal(fiat);
+    let worthALookC = prequal(chevy);
+
+    </script>
+</head>
+<body></body>
+</html>
